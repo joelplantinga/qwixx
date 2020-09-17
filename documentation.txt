@@ -1,0 +1,22 @@
+
+
+-----------------------------------------
+STARTING THE APPLICATION
+
+OSX
+activating the environment:
+. venv/bin/activate
+
+run the app:
+python3 app.py
+
+WINDOWS
+activating the environment (Windows):
+venv\Scripts\activate
+
+run the app:
+py app.py (NEED TO BE VERIFIED)
+
+
+https://flask.palletsprojects.com/en/1.1.x/installation/#install-flask
+-----------------------------------------

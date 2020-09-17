@@ -1,0 +1,79 @@
+.dices{
+    overflow: hidden;
+
+}
+
+.dice{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin: 5px;
+    float: left;
+    border-style: solid;
+    border-color: black;
+    font-size: 4em;
+}
+
+#white{
+    background-color: white;
+}
+
+#red{
+    background-color: red;
+}
+
+#blue{
+    background-color: blue;
+}
+
+#green{
+    background-color: green;
+}
+
+#yellow{
+    background-color: darkgoldenrod;
+}
+
+.unused{
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+    float: left;
+}
+
+.used{
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+    float: left;
+    /* border-style: solid;
+    border-width: 1px;
+    border-color: black; */
+    color: white;
+
+
+
+}
+
+.score{
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+.colorRow{
+    overflow: hidden;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+  }
+  
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+  
+tr:nth-child(even) {background-color: #f2f2f2;}
+  
+  

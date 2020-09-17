@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href=" {{url_for('static', filename='css/index.css')}} ">
+
+{% endblock %}
+
+{% block body %}
+    <h1>Qwixx homepage</h1>
+
+    {% if not throws %}
+        <div class="dices">
+            <div class="dice" id="white"></div>
+            <div class="dice" id="white"></div>
+            <div class="dice" id="red"></div>
+            <div class="dice" id="blue"></div>
+            <div class="dice" id="green"></div>
+            <div class="dice" id="yellow"></div>
+        </div>
+    {% else %}
+        <div class="dices">
+            <div class="dice" id="white">{{throws[-1].whiteDice1}}</div>
+            <div class="dice" id="white">{{throws[-1].whiteDice2}}</div>
+            <div class="dice" id="red">{{throws[-1].redDice}}</div>
+            <div class="dice" id="blue">{{throws[-1].blueDice}}</div>
+            <div class="dice" id="green">{{throws[-1].greenDice}}</div>
+            <div class="dice" id="yellow">{{throws[-1].yellowDice}}</div>
+        </div>
+    {% endif %}
+    {{message}}
+
+    <a href="/throwDice">Throw</a>
+
+    <div class="score">
+        <div class="colorRow">
+            {%for i in range(2, red)%} 
+                <div class= unused id="red">{{i}}</div>
+            {%endfor%} 
+            {%for i in range(red, 13)%} 
+            <div class= used id="red" >{{i}}</div>
+            {%endfor%} 
+        </div>
+
+        <div class="colorRow">
+            {%for i in range(2, blue)%} 
+            <div class= unused id="blue">{{i}}</div>
+            {%endfor%} 
+            {%for i in range(blue, 13)%} 
+            <div class= used id="blue" >{{i}}</div>
+            {%endfor%} 
+        </div>
+
+        <div class="colorRow">
+            {%for i in range(2, green)%} 
+            <div class= unused id="green">{{i}}</div>
+            {%endfor%} 
+            {%for i in range(green, 13)%} 
+            <div class= used id="green" >{{i}}</div>
+            {%endfor%} 
+        </div>
+        
+        <div class="colorRow">
+            {%for i in range(2, yellow)%} 
+            <div class= unused id="yellow">{{i}}</div>
+            {%endfor%} 
+            {%for i in range(yellow, 13)%} 
+            <div class= used id="yellow" >{{i}}</div>
+            {%endfor%}  
+        </div>     
+    </div>
+
+    <table>
+            <tr>
+            <th>Id</th>
+
+            <th>Player</th>
+            <th>White 1</th>
+            <th>White 2</th>
+            <th>Red</th>
+            <th>Blue</th>
+            <th>Green</th>
+            <th>Yellow</th>
+
+            </tr>
+            {%for throw in throws%} 
+                <tr>            
+                <td>{{throw.id}}</td>
+                <td>{{throw.player}}</td>
+                <td>{{throw.whiteDice1}}</td>
+                <td>{{throw.whiteDice2}}</td>
+                <td>{{throw.redDice}}</td>
+                <td>{{throw.blueDice}}</td>
+                <td>{{throw.greenDice}}</td>
+                <td>{{throw.yellowDice}}</td>
+                </tr>
+            {%endfor%} 
+
+    </table>
+          
+
+
+
+
+
+    
+
+{% endblock %}
