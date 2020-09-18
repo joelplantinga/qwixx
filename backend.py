@@ -11,4 +11,4 @@ def newThrow(id, player, totPlay):
         return throw(0, 1, ran(), ran(), ran(), ran(), ran(), ran() )
     else:
         # print(throw(id+1, ((player+1)%totPlay)+1 , ran(), ran(), ran(), ran(), ran(), ran() ))
-        return throw(id+1, (player+1)%totPlay+1 , ran(), ran(), ran(), ran(), ran(), ran() )
+        return throw(id+1, (player+1)%totPlay , ran(), ran(), ran(), ran(), ran(), ran() )
