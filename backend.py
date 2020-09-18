@@ -3,7 +3,7 @@ from throw import throw
 
 
 def ran():
-    return random.randint(0, 6)
+    return random.randint(1, 6)
 
 def newThrow(id, player, totPlay):
     if id == -1:

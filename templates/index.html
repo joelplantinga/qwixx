@@ -13,18 +13,22 @@
             <div class="dice" id="white"></div>
             <div class="dice" id="white"></div>
             <div class="dice" id="red"></div>
-            <div class="dice" id="blue"></div>
-            <div class="dice" id="green"></div>
             <div class="dice" id="yellow"></div>
+            <div class="dice" id="green"></div>
+            <div class="dice" id="blue"></div>
+            
+            
         </div>
     {% else %}
         <div class="dices">
             <div class="dice" id="white">{{throws[-1].whiteDice1}}</div>
             <div class="dice" id="white">{{throws[-1].whiteDice2}}</div>
             <div class="dice" id="red">{{throws[-1].redDice}}</div>
-            <div class="dice" id="blue">{{throws[-1].blueDice}}</div>
-            <div class="dice" id="green">{{throws[-1].greenDice}}</div>
             <div class="dice" id="yellow">{{throws[-1].yellowDice}}</div>
+            <div class="dice" id="green">{{throws[-1].greenDice}}</div>
+            <div class="dice" id="blue">{{throws[-1].blueDice}}</div>
+            
+            
         </div>
     {% endif %}
     {{message}}
@@ -42,13 +46,13 @@
         </div>
 
         <div class="colorRow">
-            {%for i in range(2, blue)%} 
-            <div class= unused id="blue">{{i}}</div>
+            {%for i in range(2, yellow)%} 
+            <div class= unused id="yellow">{{i}}</div>
             {%endfor%} 
-            {%for i in range(blue, 13)%} 
-            <div class= used id="blue" >{{i}}</div>
-            {%endfor%} 
-        </div>
+            {%for i in range(yellow, 13)%} 
+            <div class= used id="yellow" >{{i}}</div>
+            {%endfor%}  
+        </div>  
 
         <div class="colorRow">
             {%for i in range(2, green)%} 
@@ -58,15 +62,19 @@
             <div class= used id="green" >{{i}}</div>
             {%endfor%} 
         </div>
-        
+
         <div class="colorRow">
-            {%for i in range(2, yellow)%} 
-            <div class= unused id="yellow">{{i}}</div>
+            {%for i in range(2, blue)%} 
+            <div class= unused id="blue">{{i}}</div>
             {%endfor%} 
-            {%for i in range(yellow, 13)%} 
-            <div class= used id="yellow" >{{i}}</div>
-            {%endfor%}  
-        </div>     
+            {%for i in range(blue, 13)%} 
+            <div class= used id="blue" >{{i}}</div>
+            {%endfor%} 
+        </div>
+
+
+        
+   
     </div>
 
     <table>
